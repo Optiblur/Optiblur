@@ -1,6 +1,6 @@
 ### Hi there, I'm Optiblur 👋
 
-🔐 Learning software development with a focus on **cybersecurity** — building real projects to understand every line I write, not just copy-pasting.
+🔐 Learning software development with a focus on **cybersecurity** — building real projects.
 
 🚀 **Currently building:** [PassForge](https://github.com/Optiblur/pass-forge) — a C# / WinForms password & PIN generator with cryptographically secure random generation (CSPRNG), rejection sampling to avoid modulo bias, input validation, and unit tests.
 

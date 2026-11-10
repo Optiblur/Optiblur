@@ -38,16 +38,18 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&${{ env.COLORS }}
+          # "normal" layout, so this card is as tall as the stats card next to it
+          options: username=${{ github.repository_owner }}&layout=normal&${{ env.COLORS }}
           path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
+      # Both project cards reserve 3 lines for the description, so they are the same height
       - name: PassForge card
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: pin
-          options: username=${{ github.repository_owner }}&repo=pass-forge&${{ env.COLORS }}
+          options: username=${{ github.repository_owner }}&repo=pass-forge&description_lines_count=3&${{ env.COLORS }}
           path: profile/pin-pass-forge.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
@@ -56,7 +58,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: pin
-          options: username=${{ github.repository_owner }}&repo=ImageOnMapReborn&${{ env.COLORS }}
+          options: username=${{ github.repository_owner }}&repo=ImageOnMapReborn&description_lines_count=3&${{ env.COLORS }}
           path: profile/pin-imageonmapreborn.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
